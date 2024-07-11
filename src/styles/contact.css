@@ -1,0 +1,9 @@
+.contact-header {
+    background-image: url('../images/contact-hero.png');
+}
+.contact{
+    display: flex;
+    align-items: center;
+    margin-top: -10%;
+    min-height: 250px;
+}
