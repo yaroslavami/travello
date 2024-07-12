@@ -7,6 +7,7 @@ import Availability from './availability';
 import Contact from './contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import ampliImage from '../images/ampli-logo.png'
 
 function App() {
   useEffect(() => {
@@ -73,6 +74,7 @@ function App() {
             </div>
           </div>
           <div>
+            <a href="https://ampli.com.ua/en/"><img className="ampli-logo" alt="ampli-logo" src={ampliImage}></img></a>
             <h2>Travello</h2>
             <p>© 2024 Travello. All Rights Reserved.</p>
           </div>

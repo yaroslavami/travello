@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -32,6 +32,7 @@ header {
     padding: 2% 9%;
 }
 .nav {
+    font-family: "Montserrat", sans-serif !important;
     position: fixed;
     top: 0;
     width: 100%;
@@ -79,9 +80,15 @@ h1,
     color: black;
 }
 h2,
+h3{
+    width: 48%;
+}
+p{
+    width: 65%;
+}
+h2,
 h3,
 p {
-    width: 60%;
     text-align: left;
     padding: 1%;
 }
@@ -131,7 +138,7 @@ h3 {
     margin-left: 0;
 }
 
-main a {
+.home-main a {
     color: #E84F33;
     text-decoration: none;
     font-size: 16px;
@@ -139,11 +146,11 @@ main a {
     padding: 1%;
 }
 
-main a:hover {
+.home-main a:hover {
     text-decoration: underline;
 }
 
-.info div:last-of-type {
+.info div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,7 +162,7 @@ main a:hover {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-.info div:last-of-type p {
+.info div:last-child p {
     text-align: center;
     font-style: italic;
     padding: 1.5%;
@@ -205,7 +212,9 @@ main a:hover {
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
 }
-
+.action h2{
+    width: 70%;
+}
 .action:hover {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
@@ -300,4 +309,7 @@ footer ul li a:hover {
 
 .social-media a:hover {
     color: #555;
+}
+.ampli-logo{
+    max-width: 200px;
 }
