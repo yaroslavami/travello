@@ -61,21 +61,22 @@ header {
     list-style: none;
     margin: 0 15px;
 }
-
-.nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 14px;
-}
-.nav a:hover {
-    text-decoration: underline;
-}
 h1,
 .h1 {
     font-size: 30px !important;
     font-weight: 700;
     padding-left: 8%;
+    z-index: 4;
 }
+.nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+}
+.pages a:hover {
+    text-decoration: underline;
+}
+
 .nav.scrolled a {
     color: black;
 }

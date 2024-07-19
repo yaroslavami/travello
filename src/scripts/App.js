@@ -28,7 +28,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="nav">
-            <h1><Link className="h1" to="/">Travello</Link></h1>
+            <Link className="h1" to="/"><h1>Travello</h1></Link>
             <nav className="nav">
               <ul className="pages">
                 <li><Link to="/about">About</Link></li>
@@ -75,7 +75,7 @@ function App() {
           </div>
           <div>
             <a href="https://ampli.com.ua/en/"><img className="ampli-logo" alt="ampli-logo" src={ampliImage}></img></a>
-            <h2>Travello</h2>
+            <Link to="/"><h2>Travello</h2></Link>
             <p>© 2024 Travello. All Rights Reserved.</p>
           </div>
         </footer>
