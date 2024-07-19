@@ -20,7 +20,7 @@ The About component displays information about the company.
 The Hotels component displays a list of available hotelsfiltered by countries. Adittionaly, the component displays gallery of photos from different countries using API GET request.
 #### Contact
 The Contact component provides a way for users to get in touch with the team.
-### Technical Details
+#### Technical Details
 ##### Frontend Framework
 React
 ##### Routing Library
@@ -33,9 +33,9 @@ Ampli logo image is used in the footer section.
 **To set up and install the Travello app, follow these steps:**
 
 Clone the repository using git clone <https://github.com/yaroslavami/travello.git>
-Install the dependencies using *npm install* or *yarn install*
-Start the development server using *npm start* or *yarn start*
-Open the app in your web browser using *http://localhost:3000*
+Install the dependencies using ***npm install*** or ***yarn install***
+Start the development server using ***npm start*** or ***yarn start***
+Open the app in your web browser using **http://localhost:3000**
 
 #### Contributing
 *Contributions to the Travello app are welcome!* If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
