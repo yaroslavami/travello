@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../styles/main.css';
 import Home from './home';
 import About from './about';
-import Availability from './availability';
+import Hotels from './hotels';
 import Contact from './contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -32,7 +32,7 @@ function App() {
             <nav className="nav">
               <ul className="pages">
                 <li><Link to="/about">About</Link></li>
-                <li><Link to="/availability">Availability</Link></li>
+                <li><Link to="/hotels">Hotels</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
@@ -41,7 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/availability" element={<Availability />} />
+            <Route path="/hotels" element={<Hotels />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
@@ -57,7 +57,7 @@ function App() {
               <h4>Company</h4>
               <ul>
                 <li><Link to="/about">About</Link></li>
-                <li><Link to="/availability">Availability</Link></li>
+                <li><Link to="/hotels">Hotels</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>

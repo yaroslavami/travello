@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/main.css';
-import '../styles/availability.css';
+import '../styles/hotels.css';
 import hotels from './hotelData.js';
 
-function Availability() {
+function Hotels() {
     const [country, setCountry] = useState('');
     const [filteredHotels, setFilteredHotels] = useState([]);
     const [error, setError] = useState(null);
@@ -25,7 +25,7 @@ function Availability() {
 
     return (
         <div>
-            <header className="availability-header">
+            <header className="hotels-header">
                 <div className="text">
                     <h2>A wonderful place to find your perfect hotel!</h2>
                 </div>
@@ -65,4 +65,4 @@ function Availability() {
     );
 }
 
-export default Availability;
+export default Hotels;
