@@ -15,16 +15,18 @@ The app has a footer section that includes contact information, company details,
 #### Home
 The Home component displays the main page of the app.
 #### About
-The About component displays information about the company.
+The About component displays information about the author.
 #### Hotels
 The Hotels component displays a list of available hotelsfiltered by countries. Adittionaly, the component displays gallery of photos from different countries using API GET request.
 #### Contact
-The Contact component provides a way for users to get in touch with the team.
+The Contact component provides a way for users to get in touch with the author.
 #### Technical Details
 ##### Frontend Framework
 React
 ##### Routing Library
 React Router
+##### API used
+
 ##### Icon Library 
 Font Awesome
 ##### Image 
