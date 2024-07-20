@@ -1,0 +1,56 @@
+.about-header {
+    background-image: url('../images/about-hero.png');
+}
+
+.info-card {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-top: -15%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    min-width: 40%;
+}
+.card p {
+    text-align: center;
+    font-style: italic;
+    padding: 6%;
+    min-width: 80%;
+}
+
+.card div{
+    display: flex;
+    justify-content: center;
+    padding: 3% 0 5%;
+}
+.card a {
+    text-align: center;
+    font-style: italic;
+    padding: 6%;
+    min-width: 80%;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+.about{
+    padding: 4%;
+}
+.title, .about p{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2% 0 2% 10%;
+}
