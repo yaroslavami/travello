@@ -38,28 +38,28 @@ function Home() {
                     <div className="france">
                         <img alt="paris" src={parisImage} />
                         <h4>Paris, France</h4>
-                        <Link to="/availability">Explore more</Link>
+                        <Link to="/hotels">Explore more</Link>
                     </div>
                     <div className="italy">
                         <img alt="rome" src={romeImage} />
                         <h4>Rome, Italy</h4>
-                        <Link to="/availability">Explore more</Link>
+                        <Link to="/hotels">Explore more</Link>
                     </div>
                     <div className="britain">
                         <img alt="london" src={londonImage} />
                         <h4>London, Britain</h4>
-                        <Link to="/availability">Explore more</Link>
+                        <Link to="/hotels">Explore more</Link>
                     </div>
                     <div className="switzerland">
                         <img alt="bern" src={bernImage} />
                         <h4>Bern, Switzerland</h4>
-                        <Link to="/availability">Explore more</Link>
+                        <Link to="/hotels">Explore more</Link>
                     </div>
                     </div>
                 </section>
                 <section className="action">
                     <h2>Let's find something amazing together.</h2>
-                    <Link to="/availability">Let's get started</Link>
+                    <Link to="/hotels">Let's get started</Link>
                 </section>
             </main>
         </div>

@@ -99,8 +99,74 @@ const hotels = [
     { name: "ibis Styles Geneve Mont Blanc", address: "8-10 Rue Ami-Levrier, 1201 Geneva", starRating: 3, country: "Switzerland" },
     { name: "Hotel Ibis Basel", address: "Basel SBB, 4002 Basel", starRating: 3, country: "Switzerland" },
     { name: "Hotel Ibis Luzern", address: "Pilatusstrasse 29, 6003 Lucerne", starRating: 3, country: "Switzerland" },
-    { name: "Hotel Adler", address: "Rosengasse 10, 8001 Zurich", starRating: 3, country: "Switzerland" }
-];
+    { name: "Hotel Adler", address: "Rosengasse 10, 8001 Zurich", starRating: 3, country: "Switzerland" },
+    // Ukraine
+    { name: "Premier Palace Hotel", address: "5-7/29 T. Shevchenka Blvd., Kyiv", starRating: 5, country: "Ukraine" },
+    { name: "InterContinental", address: "2A Velyka Zhytomyrska St, Kyiv", starRating: 5, country: "Ukraine" },
+    { name: "Fairmont Grand Hotel", address: "1 Naberezhno-Khreshchatytska St, Kyiv", starRating: 5, country: "Ukraine" },
+    { name: "Hyatt Regency", address: "5, A. Tarasova St, Kyiv", starRating: 5, country: "Ukraine" },
+    { name: "Hilton", address: "30 Tarasa Shevchenka Blvd, Kyiv", starRating: 5, country: "Ukraine" },
+    { name: "Hotel Ukraine", address: "4 Institutskaya St, Kyiv", starRating: 4, country: "Ukraine" },
+    { name: "Radisson Blu Hotel", address: "22 Yaroslaviv Val St, Kyiv", starRating: 4, country: "Ukraine" },
+    { name: "11 Mirrors Design Hotel", address: "34A Bogdana Khmelnytskogo St, Kyiv", starRating: 4, country: "Ukraine" },
+    { name: "Opera Hotel", address: "53 B. Khmelnitskogo St, Kyiv", starRating: 4, country: "Ukraine" },
+    { name: "Hotel Dnipro", address: "1/2 Khreshchatyk St, Kyiv", starRating: 3, country: "Ukraine" },
+    { name: "ibis Kiev City Center", address: "Taras Shevchenko Blvd, 25, Kyiv", starRating: 3, country: "Ukraine" },
+    { name: "Hotel Bakkara", address: "1, Venice Island, Hydropark, Kyiv", starRating: 3, country: "Ukraine" },
+    { name: "Hotel Bratislava", address: "1 Malyshko St, Kyiv", starRating: 3, country: "Ukraine" },
+    { name: "Hotel Mir", address: "70, Holosiivskyi Ave, Kyiv", starRating: 3, country: "Ukraine" },
 
+    // Poland
+    { name: "Raffles Europejski", address: "Krakowskie Przedmieście 13, 00-071 Warsaw", starRating: 5, country: "Poland" },
+    { name: "Sheraton Grand", address: "Powiśle 7, 31-101 Kraków", starRating: 5, country: "Poland" },
+    { name: "Sofitel Warsaw Victoria", address: "Królewska 11, 00-065 Warsaw", starRating: 5, country: "Poland" },
+    { name: "The Westin", address: "Al. Jana Pawła II 21, 00-854 Warsaw", starRating: 5, country: "Poland" },
+    { name: "Hotel Bristol, a Luxury Collection Hotel", address: "Krakowskie Przedmieście 42/44, 00-325 Warsaw", starRating: 5, country: "Poland" },
+    { name: "PURO Hotel", address: "Ogrodowa 10, 31-155 Kraków", starRating: 4, country: "Poland" },
+    { name: "Vienna House Andel’s", address: "Ogrodowa 17, 91-065 Łódź", starRating: 4, country: "Poland" },
+    { name: "Radisson Blu Sobieski Hotel", address: "Plac Artura Zawiszy 1, 02-025 Warsaw", starRating: 4, country: "Poland" },
+    { name: "Hotel Mercure Wrocław Centrum", address: "Pl. Dominikański 1, 50-159 Wrocław", starRating: 4, country: "Poland" },
+    { name: "Holiday Inn Kraków City Centre", address: "Wielopole 4, 31-072 Kraków", starRating: 4, country: "Poland" },
+    { name: "Ibis Kraków Stare Miasto", address: "Pawia 15, 31-154 Kraków", starRating: 3, country: "Poland" },
+    { name: "Hotel Gromada Warszawa Centrum", address: "Pl. Powstańców Warszawy 2, 00-030 Warsaw", starRating: 3, country: "Poland" },
+    { name: "Campanile Wroclaw Centrum", address: "Ślężna 26, 53-302 Wrocław", starRating: 3, country: "Poland" },
+    { name: "Hotel Metropol", address: "Marszałkowska 99a, 00-693 Warsaw", starRating: 3, country: "Poland" },
+    { name: "Ibis Warszawa Centrum", address: "Al. Solidarności 165, 00-876 Warsaw", starRating: 3, country: "Poland" },
+
+    // Portugal
+    { name: "Four Seasons Hotel Ritz", address: "R. Rodrigo da Fonseca 88, 1099-039 Lisbon", starRating: 5, country: "Portugal" },
+    { name: "Pestana Palace", address: "Rua Jau 54, 1300-314 Lisbon", starRating: 5, country: "Portugal" },
+    { name: "Belmond Reid's Palace", address: "Estrada Monumental 139, 9000-098 Funchal", starRating: 5, country: "Portugal" },
+    { name: "The Yeatman", address: "Rua do Choupelo, 4400-088 Vila Nova de Gaia", starRating: 5, country: "Portugal" },
+    { name: "Vila Vita Parc Resort & Spa", address: "R. Anneliese Pohl, 8400-450 Porches", starRating: 5, country: "Portugal" },
+    { name: "Hotel Avenida Palace", address: "R. 1º de Dezembro 123, 1200-359 Lisbon", starRating: 4, country: "Portugal" },
+    { name: "InterContinental Porto - Palacio das Cardosas", address: "Praça da Liberdade 25, 4000-322 Porto", starRating: 4, country: "Portugal" },
+    { name: "Pousada de Lisboa", address: "Praça do Comércio 31-34, 1100-148 Lisbon", starRating: 4, country: "Portugal" },
+    { name: "PortoBay Liberdade", address: "Rua Rosa Araújo 8, 1250-195 Lisbon", starRating: 4, country: "Portugal" },
+    { name: "Altis Avenida Hotel", address: "R. 1º de Dezembro 120, 1200-360 Lisbon", starRating: 4, country: "Portugal" },
+    { name: "Ibis Lisboa Centro Saldanha", address: "Avenida Casal Ribeiro 23, 1000-090 Lisbon", starRating: 3, country: "Portugal" },
+    { name: "Hotel Gat Rossio", address: "Rua do Jardim do Regedor 27-35, 1150-193 Lisbon", starRating: 3, country: "Portugal" },
+    { name: "Hotel PortoBay Marquês", address: "Rua Duque de Palmela 32, 1250-098 Lisbon", starRating: 3, country: "Portugal" },
+    { name: "Hotel Dom Carlos Park", address: "Avenida Duque de Loule 121, 1050-089 Lisbon", starRating: 3, country: "Portugal" },
+    { name: "Holiday Inn Express Lisbon - Av. Liberdade", address: "Rua Alexandre Herculano 40, 1250-011 Lisbon", starRating: 3, country: "Portugal" },
+
+    // Greece
+    { name: "Hotel Grande Bretagne", address: "1 Vasileos Georgiou A' St, 105 64 Athens", starRating: 5, country: "Greece" },
+    { name: "King George", address: "3 Vasileos Georgiou A' St, 105 64 Athens", starRating: 5, country: "Greece" },
+    { name: "Canaves Oia Suites", address: "Oia, 84702 Santorini", starRating: 5, country: "Greece" },
+    { name: "Blue Palace, a Luxury Collection Resort", address: "Plaka, Elounda, 720 53 Crete", starRating: 5, country: "Greece" },
+    { name: "Santorini Secret Suites & Spa", address: "Oia, 84702 Santorini", starRating: 5, country: "Greece" },
+    { name: "Electra Metropolis", address: "15 Mitropoleos St, 105 57 Athens", starRating: 4, country: "Greece" },
+    { name: "Royal Olympic Hotel", address: "28-34 Athanasiou Diakou St, 117 43 Athens", starRating: 4, country: "Greece" },
+    { name: "Athenaeum InterContinental", address: "89-93 Syngrou Ave, 117 45 Athens", starRating: 4, country: "Greece" },
+    { name: "Radisson Blu Park Hotel", address: "10 Alexandras Ave, 106 82 Athens", starRating: 4, country: "Greece" },
+    { name: "Melia Athens", address: "14 Chalkokondili St, 106 77 Athens", starRating: 4, country: "Greece" },
+    { name: "Hotel Parthenon", address: "6 Makri St, 117 42 Athens", starRating: 3, country: "Greece" },
+    { name: "Philippos Hotel", address: "3 Mitseon St, 117 42 Athens", starRating: 3, country: "Greece" },
+    { name: "Athens Center Square Hotel", address: "15 Aristogitonos St, 105 52 Athens", starRating: 3, country: "Greece" },
+    { name: "Acropolis Hill Hotel", address: "7 Mousson St, 117 42 Athens", starRating: 3, country: "Greece" },
+    { name: "Hermes Hotel", address: "19 Apollonos St, 105 57 Athens", starRating: 3, country: "Greece" }
+
+];
 
 export default hotels;
