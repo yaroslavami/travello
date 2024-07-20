@@ -27,7 +27,7 @@ function About() {
                         <h3>Idea.</h3>
                         <h3>Exploration.</h3>
                     </div>
-                    <p>The author of this wonderful service is a student of AFE-34 group at Ampli teen accelerator. The idea was brought by Yaroslava because of her own desire to travel around the world. Exploring different opportunities is great, even better when you can compare prices and save for a whole new trip.</p>
+                    <p>The author of this wonderful service is a student of AFE-34 group at Ampli teen accelerator. The idea was brought by Yaroslava because of her own desire to travel around the world. Exploring different opportunities is great, even better when you can find hotel that fits your needs.</p>
                 </section>
             </main>
         </div>
