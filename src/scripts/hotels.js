@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import '../styles/main.css';
 import '../styles/hotels.css';
 import hotels from './hotelData.js';
+import axios from 'axios';
 
 function Hotels() {
     const [country, setCountry] = useState('');
     const [filteredHotels, setFilteredHotels] = useState([]);
     const [error, setError] = useState(null);
+    const [photo, setPhoto] = useState(null);
 
     const handleSearch = () => {
         setFilteredHotels([]);
@@ -22,6 +24,25 @@ function Hotels() {
             setError('Error filtering hotel data. Please try again.');
         }
     };
+    useEffect(() => {
+        const fetchRandomPhoto = async () => {
+        try {
+            const response = await axios.get('https://api.unsplash.com/photos/random', {
+            headers: {
+                Authorization: 'Client-ID k3Bb9_xzhlYIVV3A5z8imtyqsGVhNA3Q_aLzarVqMGo'
+            },
+            params: {
+                count: 1 
+            }
+            });
+            setPhoto(response.data[0]);
+        } catch (error) {
+            console.error('Error fetching random photo from Unsplash:', error);
+        }
+        };
+
+        fetchRandomPhoto();
+    }, []); 
 
     return (
         <div>
@@ -60,6 +81,19 @@ function Hotels() {
                 ) : (
                     <p>No hotels available for the selected location.</p>
                 )}
+                <div className="gallery-container">
+                    <h3>Bonus plus, wonderful photos to encourage you to travel</h3>
+                    {photo ? (
+                        <img
+                        src={photo.urls.small}
+                        alt={photo.alt_description}
+                        className="photo"
+                        />
+                    ) : (
+                        <p className="loading">Loading...</p>
+                    )}
+                    <button className="button" onClick={() => window.location.reload()}>Get New Photo</button>
+                </div>
             </main>
         </div>
     );
