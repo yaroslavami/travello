@@ -1,4 +1,5 @@
 # Travello App
+Link to the rendered page: <https://travello-l64z.onrender.com>
 ## Overview
 Travello is a React-based web application that provides a platform for users to explore hotels, learn about the company, and get in touch with the team.
 
