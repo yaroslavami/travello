@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/main.css';
 import '../styles/hotels.css';
 import hotels from './hotelData.js';
-import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import RandomPhoto from './RandomPhoto.js';
 
 function Hotels() {
     const [filteredHotels, setFilteredHotels] = useState([]);
     const [error, setError] = useState(null);
-    const [photo, setPhoto] = useState(null);
-    const [searchTerm, setSearchTerm] = useState(''); // State for the search term
+    const [searchTerm, setSearchTerm] = useState(''); 
 
-    // Getting the query parameters
     const { search } = useLocation();
     const queryParams = new URLSearchParams(search);
     const country = queryParams.get('country') || '';
 
-    const handleSearch = () => {
+    const handleSearch = useCallback(() => {
         setError(null);
 
         try {
@@ -29,31 +27,12 @@ function Hotels() {
             console.error('Error filtering hotel data:', error);
             setError('Error filtering hotel data. Please try again.');
         }
-    };
-
-    const fetchRandomPhoto = async () => {
-        try {
-            const response = await axios.get('https://api.unsplash.com/photos/random', {
-                headers: {
-                    Authorization: 'Client-ID k3Bb9_xzhlYIVV3A5z8imtyqsGVhNA3Q_aLzarVqMGo'
-                },
-                params: {
-                    count: 1 
-                }
-            });
-            setPhoto(response.data[0]);
-        } catch (error) {
-            console.error('Error fetching random photo from Unsplash:', error);
-        }
-    };
-
-    useEffect(() => {
-        fetchRandomPhoto();
-    }, []);
+    }, [country, searchTerm]);
 
     useEffect(() => {
         handleSearch();
-    }, [country, searchTerm]); 
+    }, [country, searchTerm, handleSearch]); 
+
     return (
         <div>
             <header className="hotels-header">
@@ -85,6 +64,8 @@ function Hotels() {
                                     <p>Address: {hotel.address}</p>
                                     <p>Country: {hotel.country}</p>
                                     <p>Star Rating: {hotel.starRating}</p>
+                                    <h5>{hotel.description}</h5>
+                                    <Link href={hotel.bookingUrl || '#'} target="_blank" rel="noopener noreferrer" className="book-now-link">Book Now!</Link>
                                 </li>
                             ))}
                         </ul>
@@ -92,20 +73,7 @@ function Hotels() {
                 ) : (
                     <p>No hotels available for the selected location.</p>
                 )}
-
-                <div className="gallery-container">
-                    <h3>Bonus plus, wonderful photos to encourage you to travel</h3>
-                    {photo ? (
-                        <img
-                            src={photo.urls.small}
-                            alt={photo.alt_description}
-                            className="photo"
-                        />
-                    ) : (
-                        <p className="loading">Loading...</p>
-                    )}
-                    <button className="button" onClick={fetchRandomPhoto}>Get New Photo</button>
-                </div>
+                <RandomPhoto/>
             </main>
         </div>
     );
