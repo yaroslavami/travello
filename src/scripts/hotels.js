@@ -53,7 +53,7 @@ function Hotels() {
 
     useEffect(() => {
         handleSearch();
-    }, [country, searchTerm]); 
+    }, [country, searchTerm, handleSearch]); 
     return (
         <div>
             <header className="hotels-header">
