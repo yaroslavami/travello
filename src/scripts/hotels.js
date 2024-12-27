@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/main.css';
 import '../styles/hotels.css';
 import hotels from './hotelData.js';
@@ -9,14 +9,13 @@ function Hotels() {
     const [filteredHotels, setFilteredHotels] = useState([]);
     const [error, setError] = useState(null);
     const [photo, setPhoto] = useState(null);
-    const [searchTerm, setSearchTerm] = useState(''); // State for the search term
+    const [searchTerm, setSearchTerm] = useState(''); 
 
-    // Getting the query parameters
     const { search } = useLocation();
     const queryParams = new URLSearchParams(search);
     const country = queryParams.get('country') || '';
 
-    const handleSearch = () => {
+    const handleSearch = useCallback(() => {
         setError(null);
 
         try {
@@ -29,7 +28,7 @@ function Hotels() {
             console.error('Error filtering hotel data:', error);
             setError('Error filtering hotel data. Please try again.');
         }
-    };
+    }, [country, searchTerm]);
 
     const fetchRandomPhoto = async () => {
         try {
@@ -54,6 +53,7 @@ function Hotels() {
     useEffect(() => {
         handleSearch();
     }, [country, searchTerm, handleSearch]); 
+
     return (
         <div>
             <header className="hotels-header">
