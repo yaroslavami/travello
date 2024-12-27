@@ -1,22 +1,28 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/main.css';
 import '../styles/hotels.css';
 import hotels from './hotelData.js';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 function Hotels() {
-    const [country, setCountry] = useState('');
     const [filteredHotels, setFilteredHotels] = useState([]);
     const [error, setError] = useState(null);
     const [photo, setPhoto] = useState(null);
+    const [searchTerm, setSearchTerm] = useState(''); // State for the search term
+
+    // Getting the query parameters
+    const { search } = useLocation();
+    const queryParams = new URLSearchParams(search);
+    const country = queryParams.get('country') || '';
 
     const handleSearch = () => {
-        setFilteredHotels([]);
         setError(null);
 
         try {
-            const results = hotels.filter(hotel => 
-                hotel.country.toLowerCase().includes(country.toLowerCase()) || country === ''
+            const results = hotels.filter(hotel =>
+                (hotel.country.toLowerCase().includes(country.toLowerCase()) || country === '') &&
+                (hotel.country.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
             );
             setFilteredHotels(results);
         } catch (error) {
@@ -24,26 +30,30 @@ function Hotels() {
             setError('Error filtering hotel data. Please try again.');
         }
     };
-    useEffect(() => {
-        const fetchRandomPhoto = async () => {
+
+    const fetchRandomPhoto = async () => {
         try {
             const response = await axios.get('https://api.unsplash.com/photos/random', {
-            headers: {
-                Authorization: 'Client-ID k3Bb9_xzhlYIVV3A5z8imtyqsGVhNA3Q_aLzarVqMGo'
-            },
-            params: {
-                count: 1 
-            }
+                headers: {
+                    Authorization: 'Client-ID k3Bb9_xzhlYIVV3A5z8imtyqsGVhNA3Q_aLzarVqMGo'
+                },
+                params: {
+                    count: 1 
+                }
             });
             setPhoto(response.data[0]);
         } catch (error) {
             console.error('Error fetching random photo from Unsplash:', error);
         }
-        };
+    };
 
+    useEffect(() => {
         fetchRandomPhoto();
-    }, []); 
+    }, []);
 
+    useEffect(() => {
+        handleSearch();
+    }, [country, searchTerm]); 
     return (
         <div>
             <header className="hotels-header">
@@ -53,11 +63,12 @@ function Hotels() {
             </header>
             <main>
                 <div className="search-container">
+                    <h3>Filtered by: {country}</h3>
                     <input
                         type="text"
-                        value={country}
-                        onChange={(e) => setCountry(e.target.value)}
-                        placeholder="Country"
+                        placeholder="Country . . ."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)} 
                     />
                     <button onClick={handleSearch}>Find Hotels</button>
                 </div>
@@ -81,18 +92,19 @@ function Hotels() {
                 ) : (
                     <p>No hotels available for the selected location.</p>
                 )}
+
                 <div className="gallery-container">
                     <h3>Bonus plus, wonderful photos to encourage you to travel</h3>
                     {photo ? (
                         <img
-                        src={photo.urls.small}
-                        alt={photo.alt_description}
-                        className="photo"
+                            src={photo.urls.small}
+                            alt={photo.alt_description}
+                            className="photo"
                         />
                     ) : (
                         <p className="loading">Loading...</p>
                     )}
-                    <button className="button" onClick={() => window.location.reload()}>Get New Photo</button>
+                    <button className="button" onClick={fetchRandomPhoto}>Get New Photo</button>
                 </div>
             </main>
         </div>
