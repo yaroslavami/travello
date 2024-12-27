@@ -30,31 +30,32 @@ function Home() {
                         <img alt="spain" src={spainImage} />
                         <p>Check availability in Spain.</p>
                         <p>RIGHT NOW!</p>
+                        <Link to="/hotels?country=Spain">Explore more</Link>
                     </div>
                 </section>
                 <section className="refering">
                     <h3>Find your perfect place to travel and explore the hotels nearby.</h3>
                     <div className="city">
-                    <div className="france">
-                        <img alt="paris" src={parisImage} />
-                        <h4>Paris, France</h4>
-                        <Link to="/hotels">Explore more</Link>
-                    </div>
-                    <div className="italy">
-                        <img alt="rome" src={romeImage} />
-                        <h4>Rome, Italy</h4>
-                        <Link to="/hotels">Explore more</Link>
-                    </div>
-                    <div className="britain">
-                        <img alt="london" src={londonImage} />
-                        <h4>London, Britain</h4>
-                        <Link to="/hotels">Explore more</Link>
-                    </div>
-                    <div className="switzerland">
-                        <img alt="bern" src={bernImage} />
-                        <h4>Bern, Switzerland</h4>
-                        <Link to="/hotels">Explore more</Link>
-                    </div>
+                        <div className="france">
+                            <img alt="paris" src={parisImage} />
+                            <h4>Paris, France</h4>
+                            <Link to="/hotels?country=France">Explore more</Link>
+                        </div>
+                        <div className="italy">
+                            <img alt="rome" src={romeImage} />
+                            <h4>Rome, Italy</h4>
+                            <Link to="/hotels?country=Italy">Explore more</Link>
+                        </div>
+                        <div className="britain">
+                            <img alt="london" src={londonImage} />
+                            <h4>London, Britain</h4>
+                            <Link to="/hotels?country=United Kingdom">Explore more</Link>
+                        </div>
+                        <div className="switzerland">
+                            <img alt="bern" src={bernImage} />
+                            <h4>Bern, Switzerland</h4>
+                            <Link to="/hotels?country=Switzerland">Explore more</Link>
+                        </div>
                     </div>
                 </section>
                 <section className="action">
@@ -63,7 +64,7 @@ function Home() {
                 </section>
             </main>
         </div>
-  );
+    );
 }
 
 export default Home;

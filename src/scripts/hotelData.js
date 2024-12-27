@@ -165,8 +165,49 @@ const hotels = [
     { name: "Philippos Hotel", address: "3 Mitseon St, 117 42 Athens", starRating: 3, country: "Greece" },
     { name: "Athens Center Square Hotel", address: "15 Aristogitonos St, 105 52 Athens", starRating: 3, country: "Greece" },
     { name: "Acropolis Hill Hotel", address: "7 Mousson St, 117 42 Athens", starRating: 3, country: "Greece" },
-    { name: "Hermes Hotel", address: "19 Apollonos St, 105 57 Athens", starRating: 3, country: "Greece" }
+    { name: "Hermes Hotel", address: "19 Apollonos St, 105 57 Athens", starRating: 3, country: "Greece" },
 
+    // United States
+    { name: "The Plaza Hotel", address: "768 5th Ave, New York, NY 10019", starRating: 5, country: "United States" },
+    { name: "The Beverly Hills Hotel", address: "9641 Sunset Blvd, Beverly Hills, CA 90210", starRating: 5, country: "United States" },
+    { name: "Four Seasons Hotel Chicago", address: "120 E Delaware Pl, Chicago, IL 60611", starRating: 5, country: "United States" },
+    { name: "The Venetian Resort", address: "3355 S Las Vegas Blvd, Las Vegas, NV 89109", starRating: 4, country: "United States" },
+    { name: "Hilton Garden Inn", address: "815 14th St NW, Washington, DC 20005", starRating: 3, country: "United States" },
+
+    // Canada
+    { name: "Fairmont Banff Springs", address: "405 Spray Ave, Banff, AB T1L 1J4", starRating: 5, country: "Canada" },
+    { name: "Hotel Le Germain", address: "1227 Rue de la Montagne, Montreal, QC H3G 1Z2", starRating: 4, country: "Canada" },
+    { name: "The Wickaninnish Inn", address: "500 Osprey Lane, Tofino, BC V0R 2Z0", starRating: 4, country: "Canada" },
+    { name: "Sheraton Centre Toronto Hotel", address: "123 Queen St W, Toronto, ON M5H 2M9", starRating: 3, country: "Canada" },
+    { name: "Delta Hotels by Marriott", address: "2094 Rue de Champlain, Montreal, QC H2L 2T6", starRating: 3, country: "Canada" },
+
+    // Australia
+    { name: "Park Hyatt Sydney", address: "7 Hickson Rd, The Rocks NSW 2000", starRating: 5, country: "Australia" },
+    { name: "Crown Towers Melbourne", address: "8 Whiteman St, Southbank VIC 3006", starRating: 5, country: "Australia" },
+    { name: "The Langham Melbourne", address: "1 Southgate Ave, Southbank VIC 3006", starRating: 4, country: "Australia" },
+    { name: "Novotel Sydney Darling Square", address: "17 Little Pier St, Sydney NSW 2000", starRating: 3, country: "Australia" },
+    { name: "Adina Apartment Hotel Brisbane", address: "171 George St, Brisbane City QLD 4000", starRating: 3, country: "Australia" },
+
+    // Japan
+    { name: "The Ritz-Carlton Tokyo", address: "Tokyo Midtown 9-7-1, Akasaka, Minato City, Tokyo 107-6245", starRating: 5, country: "Japan" },
+    { name: "Aman Tokyo", address: "Otemachi Tower, 1 Chome-5-6 Otemachi, Chiyoda City, Tokyo 100-0004", starRating: 5, country: "Japan" },
+    { name: "Conrad Osaka", address: "3-2-4 Nakanoshima, Kita Ward, Osaka, 530-0005", starRating: 4, country: "Japan" },
+    { name: "Hotel Granvia Kyoto", address: "JR Kyoto Station Karasuma Chuo-guchi, Kyoto, 600-8216", starRating: 4, country: "Japan" },
+    { name: "Tokyu Stay Shinjuku", address: "3 Chome-7-1 Shinjuku, Shinjuku City, Tokyo 160-0022", starRating: 3, country: "Japan" },
+
+    // Brazil
+    { name: "Copacabana Palace", address: "Avenida Atlântica, 1702, Copacabana, Rio de Janeiro - RJ, 22021-001", starRating: 5, country: "Brazil" },
+    { name: "Fasano São Paulo", address: "Rua Vitório Fasano, 88, São Paulo - SP, 01414-020", starRating: 5, country: "Brazil" },
+    { name: "Hotel Unique", address: "Avenida Brigadeiro Luís Antônio, 4700, São Paulo - SP, 01402-002", starRating: 4, country: "Brazil" },
+    { name: "Grand Hyatt Rio de Janeiro", address: "Av. Lucio Costa, 9600, Barra da Tijuca, Rio de Janeiro - RJ, 22795-007", starRating: 4, country: "Brazil" },
+    { name: "Ibis Budget Curitiba", address: "Rua Mariano Torres, 927, Centro, Curitiba - PR, 80060-120", starRating: 3, country: "Brazil" },
+
+    // South Africa
+    { name: "One&Only Cape Town", address: "Dock Rd, Victoria & Alfred Waterfront, Cape Town, 8001", starRating: 5, country: "South Africa" },
+    { name: "The Saxon Hotel", address: "36 Saxon Rd, Sandhurst, Sandton, Johannesburg, 2196", starRating: 5, country: "South Africa" },
+    { name: "Cape Grace Hotel", address: "West Quay Rd, Victoria & Alfred Waterfront, Cape Town, 8001", starRating: 4, country: "South Africa" },
+    { name: "The Peech Hotel", address: "61 North St, Melrose, Johannesburg, 2196", starRating: 4, country: "South Africa" },
+    { name: "Road Lodge Cape Town", address: "Adjoining BP service and Filling Station, N2 and R300, Cape Town, 7530", starRating: 3, country: "South Africa" },
 ];
 
 export default hotels;
