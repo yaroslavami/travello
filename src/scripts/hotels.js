@@ -85,6 +85,7 @@ function Hotels() {
                                     <p>Address: {hotel.address}</p>
                                     <p>Country: {hotel.country}</p>
                                     <p>Star Rating: {hotel.starRating}</p>
+                                    <a href={hotel.bookingUrl || '#'} target="_blank" rel="noopener noreferrer" className="book-now-link">Book Now!</a>
                                 </li>
                             ))}
                         </ul>
